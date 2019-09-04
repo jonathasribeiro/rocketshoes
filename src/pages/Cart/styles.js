@@ -20,6 +20,11 @@ export const Container = styled.div`
       padding: 12px 20px;
       font-weight: bold;
       text-transform: uppercase;
+      transition: background 0.2s;
+
+      &:hover {
+        background: ${darken(0.3, '#7159c1')};
+      }
     }
   }
 `;
@@ -75,13 +80,21 @@ export const ProductTable = styled.table`
       padding: 12px 20px;
       font-weight: bold;
       text-transform: uppercase;
-      transition: background 0.2s;
-
-      &:hover {
-        background: ${darken(0.3, '#7159c1')};
-      }
     }
   }
 `;
 
-export const Total = styled.div``;
+export const Total = styled.div`
+  display: flex;
+  align-items: baseline;
+
+  span {
+    color: #999;
+    font-weight: bold;
+  }
+
+  strong {
+    font-size: 28px;
+    margin-left: 5px;
+  }
+`;
